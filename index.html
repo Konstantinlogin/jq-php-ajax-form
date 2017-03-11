@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PHP + AJAX send mail form</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+
+    <h1>$form['form-1']</h1>
+    <form class="b-form js-form" action="" method="get" name="form-1">
+        <input class="b-form__input" name="name" type="text" placeholder="Name">
+        <input class="b-form__input" name="tell" type="text" placeholder="Phone">
+        <input class="b-form__input" name="e-mail" type="text" placeholder="E-mail">
+        <textarea class="b-form__input" name="text" placeholder="Message"></textarea>
+        <label class="b-form__label">
+            <input class="b-form__checkbox" type="checkbox" value="Yes" name="checkbox"> Checkbox
+        </label>
+
+        <input class="n-form__input js-feedback" name="send" type="button" value="Send [form-1']">
+
+        <div class="js-form__info-messages">
+
+        </div>
+    </form>
+     
+    <h1>$form['form-2']</h1>
+    <form class="b-form js-form" action="" method="get" name="form-2">
+        <input class="b-form__input" name="name" type="text" placeholder="Name">
+        <input class="b-form__input" name="tell" type="text" placeholder="Phone">
+        <input class="b-form__input" name="e-mail" type="text" placeholder="E-mail">
+        <textarea class="b-form__input" name="text" placeholder="Message"></textarea>
+        <label class="b-form__label">
+            <input class="b-form__checkbox" type="checkbox" value="Yes" name="checkbox"> Checkbox
+        </label>
+
+        <input class="b-form__input js-feedback" name="send" type="button" value="Send [form-2']">
+        <div class="js-form__info-messages">
+            
+        </div>
+    </form>
+
+</div>
+
+
+<style>
+/*Классы состояний*/
+    /*--Зарузка-- Кнопка во время отправки формы*/
+    .is-button-loading {
+        opacity: 0.5;
+        cursor: default;
+    }
+    /*--Success--Инпут по событию сабмит если поле заполнено ВЕРНО */
+    .is-input-success {
+        border: 1px solid green;
+    }
+    /*--Error--Инпут по событию сабмит если поле заполнено  НЕ ВЕРНО */
+    .is-input-error {
+        border: 1px solid red;
+    }
+     /*--Success-- класс для сообщения если форма была отправлена успешно */
+    .is-sever-success-message {
+        color: green;
+    }
+    /*--Error-- класс для сообщения если форма Не была отправлена */
+    .is-sever-error-message {
+        color: red;
+    }
+
+</style>
+
+</body>
+</html>
