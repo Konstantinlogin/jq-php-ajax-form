@@ -1,0 +1,88 @@
+=main-font 
+    font-family: Arial, sans-serif
+$active-color: #3498db
+$button-color: #207ab6
+$error-color: #DD0021
+$grey-color: #b5b8bc
+$success-color: green
+
+.callback-container
+    min-height: 120px
+    +main-font
+
+    // --Зарузка-- Кнопка во время отправки формы
+    .is-button-loading
+        opacity: 0.5
+        &:hover
+            cursor: default!important
+
+    // --Success--Инпут по событию сабмит если поле заполнено ВЕРНО
+    .is-input-success 
+        border-color: $active-color!important
+
+    // --Error--Инпут по событию сабмит если поле заполнено  НЕ ВЕРНО 
+    .is-input-error 
+        border-color: $error-color!important
+
+        &::-webkit-input-placeholder 
+            color: $error-color
+        &::-moz-placeholder 
+            color: $error-color         
+        &:-moz-placeholder
+            color: $error-color
+        &:-ms-input-placeholder
+            color: $error-color
+
+    // --Error--Сообщения (список) если поле заполнено  НЕ ВЕРНО 
+    .info-block_error
+        margin-top: 8px
+        list-style: none
+        float: right
+        color: $error-color
+        font-size: 14px
+        li
+            display: block
+            padding-bottom: 2.5px
+            padding-top: 0
+            margin-left: -10px
+
+    // Сообщения (список) для всех сообщений сервера
+
+    .info-block_info
+        @extend .info-block_error
+        color: black
+        
+
+    //  --Success-- класс для сообщения если форма была отправлена успешно (добавляется к info-block_info)
+    .is-server-success-message
+        color: $success-color
+
+    // --Error-- класс для сообщения если форма Не была отправлена (добавляется к info-block_info)
+    .is-server-error-message
+        color: $error-color
+
+    .callback-form
+        &__input
+            display: block
+            width: 100%
+            border-left: none
+            border-right: none
+            border-top: none
+            outline: none
+            border-bottom: 2px solid $grey-color
+            padding-top: 15px
+            padding-bottom: 5px  
+        &__submit
+            float: left
+            margin-top: 10px
+            border: none
+            color: white
+            padding: 9px 20px 10px 20px
+            border-radius: 4px
+            background-color: $button-color
+            outline: none
+            cursor: pointer
+            &:hover
+                cursor: pointer
+        
+    

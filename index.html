@@ -5,13 +5,35 @@
     <title>PHP + AJAX send mail form</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="feedback/js/feedback.js"></script>
+    <link rel="stylesheet" href="css/variables/cctr.ru/style.css">
 </head>
 
 <body>
-<div class="container">
+
+<!--<span class="js-click-modal">Модальное окно</span>
+<span class="js-click-modal">Модальное окно</span>-->
+<div style="width: 480px" id="callback-modal">
+    <div class="callback-container">
+        <form class="callback-form js-form" action="" method="get" name="cctr-callback">
+
+            <input class="callback-form__input" name="name" type="text" placeholder="Имя">
+            <input class="callback-form__input" name="tell" type="text" placeholder="Телефон">
+
+            <input class="callback-form__submit js-feedback" name="send" type="button" value="Отправить"/>
+
+            <div class="js-form__info-messages">
+
+            </div>
+        </form>
+    </div>   
+</div>
 
 
-    <h1>$form['form-1']</h1>
+<div class="form-container">
+    <div class="form-container__header">
+        <h1 class="form-container__tagline">$form['form-1']</h1>
+    </div>
+    
     <form class="b-form js-form" action="" method="get" name="form-1">
         <input class="b-form__input" name="name" type="text" placeholder="Name">
         <input class="b-form__input" name="tell" type="text" placeholder="Phone">
@@ -27,7 +49,9 @@
 
         </div>
     </form>
-     
+</div>
+
+<div class="form-container"> 
     <h1>$form['form-2']</h1>
     <form class="b-form js-form" action="" method="get" name="form-2">
         <input class="b-form__input" name="name" type="text" placeholder="Name">
@@ -45,33 +69,6 @@
     </form>
 
 </div>
-
-
-<style>
-/*Классы состояний*/
-    /*--Зарузка-- Кнопка во время отправки формы*/
-    .is-button-loading {
-        opacity: 0.5;
-        cursor: default;
-    }
-    /*--Success--Инпут по событию сабмит если поле заполнено ВЕРНО */
-    .is-input-success {
-        border: 1px solid green;
-    }
-    /*--Error--Инпут по событию сабмит если поле заполнено  НЕ ВЕРНО */
-    .is-input-error {
-        border: 1px solid red;
-    }
-     /*--Success-- класс для сообщения если форма была отправлена успешно */
-    .is-sever-success-message {
-        color: green;
-    }
-    /*--Error-- класс для сообщения если форма Не была отправлена */
-    .is-sever-error-message {
-        color: red;
-    }
-
-</style>
 
 </body>
 </html>

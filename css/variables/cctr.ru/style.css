@@ -1,0 +1,91 @@
+.callback-container {
+  min-height: 120px;
+  font-family: Arial, sans-serif;
+}
+
+.callback-container .is-button-loading {
+  opacity: 0.5;
+}
+
+.callback-container .is-button-loading:hover {
+  cursor: default !important;
+}
+
+.callback-container .is-input-success {
+  border-color: #3498db !important;
+}
+
+.callback-container .is-input-error {
+  border-color: #DD0021 !important;
+}
+
+.callback-container .is-input-error::-webkit-input-placeholder {
+  color: #DD0021;
+}
+
+.callback-container .is-input-error::-moz-placeholder {
+  color: #DD0021;
+}
+
+.callback-container .is-input-error:-moz-placeholder {
+  color: #DD0021;
+}
+
+.callback-container .is-input-error:-ms-input-placeholder {
+  color: #DD0021;
+}
+
+.callback-container .info-block_error, .callback-container .info-block_info {
+  margin-top: 8px;
+  list-style: none;
+  float: right;
+  color: #DD0021;
+  font-size: 14px;
+}
+
+.callback-container .info-block_error li, .callback-container .info-block_info li {
+  display: block;
+  padding-bottom: 2.5px;
+  padding-top: 0;
+  margin-left: -10px;
+}
+
+.callback-container .info-block_info {
+  color: black;
+}
+
+.callback-container .is-server-success-message {
+  color: green;
+}
+
+.callback-container .is-server-error-message {
+  color: #DD0021;
+}
+
+.callback-container .callback-form__input {
+  display: block;
+  width: 100%;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  outline: none;
+  border-bottom: 2px solid #b5b8bc;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.callback-container .callback-form__submit {
+  float: left;
+  margin-top: 10px;
+  border: none;
+  color: white;
+  padding: 9px 20px 10px 20px;
+  border-radius: 4px;
+  background-color: #207ab6;
+  outline: none;
+  cursor: pointer;
+}
+
+.callback-container .callback-form__submit:hover {
+  cursor: pointer;
+}

@@ -86,6 +86,7 @@ function feedback(vars) {
             //Состояние кнопки в процессе отправки формы
             $(bt).prop("disabled", true);
             $(bt).addClass('is-button-loading');
+            $(bt).val("Отправка...")
         },
         success: function(answer) {
 
@@ -175,11 +176,17 @@ function feedback(vars) {
           }
             $(bt).prop("disabled", false);
             $(bt).removeClass('is-button-loading');
-            //$(bt).val(bvc);
+            $(bt).val(bvc);
 
             if(isset(answer.ok) && answer.ok == 1) {
-                $(vars.form).find(".info-block_info").addClass("is-sever-success-message");
+                $(vars.form).find(".info-block_info").addClass("is-server-success-message");
+                $(vars.form).find(".info-block_info").removeClass("is-server-error-message");
                 $(vars.form)[0].reset();      
+            }
+            else {
+                $(vars.form).find(".info-block_info").addClass("is-server-error-message");
+                $(vars.form).find(".info-block_info").removeClass("is-server-success-message");
+
             }
         }
     });

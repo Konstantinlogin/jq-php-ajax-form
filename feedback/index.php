@@ -11,6 +11,56 @@ $host = $_SERVER['HTTP_HOST'];
 $ref = $_SERVER['HTTP_REFERER'];
 
 
+$form['cctr-callback'] = array(
+	'fields' => array(
+		'name' => array(
+			'title' => 'имя',
+			'validate' => array(
+				'preg' => '%[A-Z-a-zА-Яа-я\s]%',
+				'minlength' => '3',
+				'maxlength' => '35',
+			),
+			'messages' => array(
+				'preg' => 'Введите корректное имя',
+				'minlength' => 'Введите корректное имя',
+				'maxlength' => 'Введите корректное имя',
+			)
+		),
+		'tell' => array(
+			'title' => 'Телефон',
+			'validate' => array(
+				'preg' => "/^((8|\+)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{5,10}$/",
+				'minlength' => '5',
+			),
+			'messages' => array(
+				'preg' => 'Указан неверный %1$s',
+				'minlength' => 'Указан неверный %1$s',
+			)
+		),
+	),
+	'cfg' => array(
+		'charset' => 'utf-8',
+		'subject' => 'Тема письма',
+		'title' => 'Заголовок в теле письма',
+		'ajax' => true,
+		'validate' => true,
+		'from_email' => 'noreply@email.com',
+		'from_name' => 'noreply',
+		'to_email' => 'noreply1@email.com, noreply2@email.com',
+		'to_name' => 'noreply1, noreply2',
+		'geoip' => true,
+		'referer' => true,
+		'type' => 'html',
+		'tpl' => true,
+		'antispam' => 'email77',
+		'antispamjs' => 'address77',
+		'okay' => 'Спасибо! Мы скоро позвоним Вам!',
+		'fuck' => 'Превышено время ожидания сервера, повторите попытку позже',
+		'spam' => 'Cпам робот',
+		'notify' => 'color-modal-textbox',
+		'usepresuf' => false
+	)
+);
 
 $form['form-1'] = array(
 	'fields' => array(
