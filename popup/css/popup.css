@@ -1,0 +1,53 @@
+.callback-modal {
+  font-family: Arial, sans-serif;
+  height: auto;
+  width: 480px;
+  background: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  z-index: 2;
+  display: none;
+  position: fixed;
+}
+
+.callback-modal__header {
+  color: white;
+  background-color: #207ab6;
+  width: 500px;
+  margin-left: -10px;
+}
+
+.callback-modal__tagline {
+  font-size: 21px;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.callback-modal__close {
+  font-size: 21px;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  border: 1px solid white;
+  width: 23px;
+  height: 23px;
+  border-radius: 23px;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#dark-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #000;
+  opacity: 0.8;
+  left: 0;
+  top: 0;
+}

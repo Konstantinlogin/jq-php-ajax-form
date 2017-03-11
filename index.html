@@ -5,14 +5,26 @@
     <title>PHP + AJAX send mail form</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="feedback/js/feedback.js"></script>
+    <script src="popup/js/popup.js"></script>
     <link rel="stylesheet" href="css/variables/cctr.ru/style.css">
+    <link rel="stylesheet" href="popup/css/popup.css">
 </head>
 
 <body>
 
+        <input type="button" value="Show modal" onclick="showModalWin()">
+        <input type="button" value="Show modal 2" onclick="showModalWin()">
+  
+    <!-- Modal content -->
+
+
 <!--<span class="js-click-modal">Модальное окно</span>
 <span class="js-click-modal">Модальное окно</span>-->
-<div style="width: 480px" id="callback-modal">
+<div class="callback-modal" id="callback-modal">
+    <div class="callback-modal__header">
+        <h1 class="callback-modal__tagline">Заказать звонок</h1>
+        <span class="callback-modal__close" id="callback-modal-close">&times;</span>
+    </div>
     <div class="callback-container">
         <form class="callback-form js-form" action="" method="get" name="cctr-callback">
 
